@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Classification</title>
+       
+    </head>
+
+<style>
+    body{
+        font: arial;
+        background: linear-gradient(to left, #8942a8, #ba382f);
+        width: 100%;
+        height: 100vh;
+    }
+ 
+</style>    
+
+<body >
+        <center>
+        <div>
+            
+            <h1>Student Classification</h1><br>
+            
+            {{ prediction_text }} <br>
+            
+            <form action ="{{url_for('predict')}}", method = "post">
+            
+            
+                    
+                <h3>Math Score</h3>
+                <input type="text" name="math_score" placeholder="0-100" required="required" /> 
+                
+                <h3>Reading Score</h3>
+                <input type="text" name="reading_score" placeholder="0-100" required="required" /> 
+                
+                <h3>Writing Score</h3>
+                <input type="text" name="writing_score" placeholder="0-100" required="required" /> 
+                
+                <h3>Lunch</h3>
+                <select type="text" name="lunch" id="lunch" required="required">
+                    <option value="1">Standard</option>
+                    <option value="0">Free/Reduced</option></select>
+                
+                <h3>Parental Level of Education</h3>    
+                <select type="text" name="parental_education" id="parental_education" required="required">
+                    <option value="1">Bachelor's degree</option>
+                    <option value="2">Some college</option>
+                    <option value="3">master's degree</option>
+                    <option value="4">associate's degree</option>
+                    <option value="5">high school</option>
+                    <option value="6">some high school</option></select><br><br>
+                
+                   
+                <br><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            
+        <br><br>
+        
+         <br><br><br><hr>
+         
+        </center>
+
+
+        </div>
+</body>
+</html>
+
+<style>
+
