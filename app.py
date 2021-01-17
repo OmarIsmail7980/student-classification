@@ -27,9 +27,9 @@ def predict():
     prediction=model.predict(arr)
     
     if(prediction==1):
-        return render_template("index.html", prediction_text= "You are a female Student")
-    else:
         return render_template("index.html", prediction_text= "You are a Male Student")
+    else:
+        return render_template("index.html", prediction_text= "You are a Female Student")
         
     
 if __name__=="__main__":
