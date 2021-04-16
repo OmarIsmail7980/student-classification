@@ -1,7 +1,7 @@
 # student-classification
 
 
-Classify wether a student is Male or a Female
+Classify wether a student is a Male or a Female
 
 #Requirments
 
